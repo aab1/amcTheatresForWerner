@@ -16,15 +16,22 @@ namespace WernerDemo.Pages
 
         [FindsBy(How = How.XPath, Using = "//li[@class='layout__row']/ul/li/div[starts-with(@aria-label,'Row') and contains(@aria-label,'Love seat')]")]
         private IList<IWebElement> seatNumbers;
+        [FindsBy(How = How.CssSelector, Using = "button#checkout-continue")]
+        private IWebElement continueBtn;
 
         public void clickARandomSeat()
         {
+            Console.WriteLine($"seatNumbers.Count {seatNumbers.Count}");
             VerifyElementsAreDisplayed(seatNumbers);
             var random = new Random();
             var availableSeatNumbers = random.Next(0, seatNumbers.Count - 1);
             seatNumbers[availableSeatNumbers].Click();
         }
 
-
+        public TicketTypePage clickContinue()
+        {
+            continueBtn.Click();
+            return new TicketTypePage(_driver);
+        }
     }
 }

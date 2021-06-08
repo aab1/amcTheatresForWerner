@@ -25,7 +25,7 @@ namespace WernerDemo.Pages
 
         public ShowTimesPage clickShowTimes()
         {
-            WaitForElementToBeClickable(showTimes);
+            WaitForElementToBeClickable(showTimes); 
             showTimes.Click();
             return new ShowTimesPage(_driver);
         }
