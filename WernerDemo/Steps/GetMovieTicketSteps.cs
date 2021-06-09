@@ -23,7 +23,7 @@ namespace WernerDemo.Steps
         {
             showTimePage = homePage.clickShowTimes();
             showTimePage.clickARandomShowTime();
-            //showTimePage.clickAccept();
+           // showTimePage.clickAccept();
             seatNumberPage = showTimePage.clickContinue();
         }
 

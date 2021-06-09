@@ -14,7 +14,7 @@ namespace WernerDemo.Pages
             PageFactory.InitElements(_driver, this);
         }
 
-        [FindsBy(How = How.XPath, Using = "//li[@class='layout__row']/ul/li/div[starts-with(@aria-label,'Row') and contains(@aria-label,'Love seat')]")]
+        [FindsBy(How = How.XPath, Using = "//li[@class='layout__row']/ul/li/div[starts-with(@aria-label,'Row') and contains(@aria-label,'Can reserve')]")]
         private IList<IWebElement> seatNumbers;
         [FindsBy(How = How.CssSelector, Using = "button#checkout-continue")]
         private IWebElement continueBtn;
