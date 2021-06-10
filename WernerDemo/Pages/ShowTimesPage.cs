@@ -33,13 +33,19 @@ namespace WernerDemo.Pages
 
         public void clickAccept()
         {
-            //WaitForElementToBeClickable(accept);
-            accept.Click();
+            try
+            {
+                accept.Click();
+            }
+            catch (Exception)
+            {
+
+                
+            }
         }
 
         public SeatNumberPage clickContinue()
         {
-            //WaitForElementToBeClickable(continueBtn);
             continueBtn.Click();
             return new SeatNumberPage(_driver);
         }
